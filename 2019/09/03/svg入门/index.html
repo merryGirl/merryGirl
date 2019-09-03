@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="svg入门笔记">
+
+
+
+
+  <meta name="keywords" content="svg,">
+
+
+
+
+
+  <link rel="alternate" href="/default" title="MerryGirl">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1">
+
+
+
+<link rel="canonical" href="http://yoursite.com/2019/09/03/svg入门/">
+
+
+<meta name="description" content="入门博客：阮一峰MDN SVG是XML语言的一种形式，有点类似XHTML 语法 如果只想展示svg的一部分，需要指定viewBox属性 use标签方便重用 g标签用于将多个形状组成一个组，方便复用 defs标签用于自定义形状，内部代码不显示，仅供引用 fill设置对象内部颜色 stroke设置线条颜色 text文本  1.坐标定位 viewBox  &amp;lt;svg width=&amp;quot;200&amp;">
+<meta name="keywords" content="svg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="svg入门笔记">
+<meta property="og:url" content="http://yoursite.com/2019/09/03/svg入门/index.html">
+<meta property="og:site_name" content="MerryGirl">
+<meta property="og:description" content="入门博客：阮一峰MDN SVG是XML语言的一种形式，有点类似XHTML 语法 如果只想展示svg的一部分，需要指定viewBox属性 use标签方便重用 g标签用于将多个形状组成一个组，方便复用 defs标签用于自定义形状，内部代码不显示，仅供引用 fill设置对象内部颜色 stroke设置线条颜色 text文本  1.坐标定位 viewBox  &amp;lt;svg width=&amp;quot;200&amp;">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-03T03:09:02.598Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="svg入门笔记">
+<meta name="twitter:description" content="入门博客：阮一峰MDN SVG是XML语言的一种形式，有点类似XHTML 语法 如果只想展示svg的一部分，需要指定viewBox属性 use标签方便重用 g标签用于将多个形状组成一个组，方便复用 defs标签用于自定义形状，内部代码不显示，仅供引用 fill设置对象内部颜色 stroke设置线条颜色 text文本  1.坐标定位 viewBox  &amp;lt;svg width=&amp;quot;200&amp;">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> svg入门笔记 - MerryGirl </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">MerryGirl</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          svg入门笔记
+        
+      </h1>
+
+      <time class="post-time">
+          Sep 03 2019
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <p><a href="https://www.ruanyifeng.com/blog/2018/08/svg.html" target="_blank" rel="noopener">入门博客：阮一峰</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Tutorial/Introduction" target="_blank" rel="noopener">MDN</a></p>
+<p><strong>SVG是XML语言的一种形式，有点类似XHTML</strong></p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><ul>
+<li>如果只想展示svg的一部分，需要指定viewBox属性</li>
+<li><code>use</code>标签方便重用</li>
+<li><code>g</code>标签用于将多个形状组成一个组，方便复用</li>
+<li><code>defs</code>标签用于自定义形状，内部代码不显示，仅供引用</li>
+<li><code>fill</code>设置对象内部颜色</li>
+<li><code>stroke</code>设置线条颜色</li>
+<li><code>text</code>文本</li>
+</ul>
+<h2 id="1-坐标定位"><a href="#1-坐标定位" class="headerlink" title="1.坐标定位"></a>1.坐标定位</h2><ul>
+<li>viewBox</li>
+</ul>
+<p><code>&lt;svg width=&quot;200&quot; height=&quot;200&quot; viewBox=&quot;0 0 100 100&quot;&gt;</code> </p>
+<p>画布尺寸200 * 200，viewBox定义画布显示区域从起点<code>（0， 0）</code>开始显示<code>100 * 100</code>的区域，放大到 <code>200 * 200</code>的画布上</p>
+<h2 id="2-基本形状"><a href="#2-基本形状" class="headerlink" title="2.基本形状"></a>2.基本形状</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;</span><br><span class="line">&lt;svg width=&quot;300&quot; height=&quot;300&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;</span><br><span class="line">  &lt;!-- </span><br><span class="line">    rect绘制矩形</span><br><span class="line">    x:距离左上角x位置</span><br><span class="line">    y：距离左上角y位置</span><br><span class="line">    width：矩形的宽度</span><br><span class="line">    height：矩形的高度</span><br><span class="line">    rx：圆角的x方位半径</span><br><span class="line">    ry：圆角的y方位半径</span><br><span class="line">   --&gt;</span><br><span class="line">  &lt;rect x=&quot;10&quot; y=&quot;10&quot; width=&quot;30&quot; height=&quot;30&quot; stroke=&quot;black&quot; fill=&quot;transparent&quot; stroke-width=&quot;5&quot;/&gt;</span><br><span class="line">  &lt;rect x=&quot;60&quot; y=&quot;10&quot; rx=&quot;10&quot; ry=&quot;10&quot; width=&quot;30&quot; height=&quot;30&quot; stroke=&quot;black&quot; fill=&quot;transparent&quot; stroke-width=&quot;5&quot;/&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- </span><br><span class="line">    circle绘制圆形</span><br><span class="line">    cx：圆心的x位置</span><br><span class="line">    cy：圆心的y位置</span><br><span class="line">    rx：圆角的x半径</span><br><span class="line">   --&gt;</span><br><span class="line">  &lt;circle cx=&quot;25&quot; cy=&quot;75&quot; r=&quot;20&quot; stroke=&quot;red&quot; fill=&quot;transparent&quot; stroke-width=&quot;5&quot;/&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- </span><br><span class="line">    ellipse绘制椭圆</span><br><span class="line">    rx：椭圆的x半径</span><br><span class="line">    ry：椭圆的y半径</span><br><span class="line">    cx：椭圆中心的x位置</span><br><span class="line">    cy：椭圆中心的y位置</span><br><span class="line">  --&gt;</span><br><span class="line">  &lt;ellipse cx=&quot;75&quot; cy=&quot;75&quot; rx=&quot;20&quot; ry=&quot;5&quot; stroke=&quot;red&quot; fill=&quot;transparent&quot; stroke-width=&quot;5&quot;/&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- </span><br><span class="line">    line：绘制直线</span><br><span class="line">   --&gt;</span><br><span class="line">  &lt;line x1=&quot;10&quot; x2=&quot;50&quot; y1=&quot;110&quot; y2=&quot;150&quot; stroke=&quot;orange&quot; fill=&quot;transparent&quot; stroke-width=&quot;5&quot;/&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- </span><br><span class="line">    Polyline折线</span><br><span class="line">    points：点集</span><br><span class="line">   --&gt;</span><br><span class="line">  &lt;polyline points=&quot;60 110 65 120 70 115 75 130 80 125 85 140 90 135 95 150 100 145&quot;</span><br><span class="line">      stroke=&quot;orange&quot; fill=&quot;transparent&quot; stroke-width=&quot;5&quot;/&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- </span><br><span class="line">    polygon多边形</span><br><span class="line">  --&gt;</span><br><span class="line">  &lt;polygon points=&quot;50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180&quot;</span><br><span class="line">      stroke=&quot;green&quot; fill=&quot;transparent&quot; stroke-width=&quot;5&quot;/&gt;</span><br><span class="line">  &lt;!-- </span><br><span class="line">    path路径</span><br><span class="line">   --&gt;</span><br><span class="line">  &lt;path d=&quot;M20,230 Q40,205 50,230 T90,230&quot; fill=&quot;none&quot; stroke=&quot;blue&quot; stroke-width=&quot;5&quot;/&gt;</span><br><span class="line">&lt;/svg&gt;</span><br></pre></td></tr></table></figure>
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/svg/">svg</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2019/08/29/annual-objectives/">
+        <span class="next-text nav-default">19年目标</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2019
+    <span class="footer-author">MerryGirl.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
